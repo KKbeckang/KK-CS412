@@ -1,0 +1,23 @@
+<div name="outerList">
+  <h3>Click the zipcode to show the location:</h3>
+  <ul *ngFor="let zipinfo of zipcode">
+    <li (click)="showlocation(zipinfo.zipcode)"><button>{{zipinfo.zipcode}}</button></li>
+
+
+  </ul>
+</div>
+
+<div name="details exact location" *ngIf="selectedZIP">
+  <h2><b>{{selectedZIP.zipcode}}</b></h2>
+  <label>lat</label><br>
+  <input name="lat" type="text" value="{{selectedZIP.lat}}">
+  <br><br>
+  <label>lng</label><br>
+  <input name="lng" type="text" value="{{selectedZIP.lng}}">
+  <br><br>
+  <label>city</label><br>
+  <input name="city" type="text" value="{{selectedZIP.city}}">
+  <br><br>
+  <label>zipcode</label><br>
+  <input name="zipcode" type="text" value="{{selectedZIP.zipcode}}">
+</div>
