@@ -1,3 +1,8 @@
-<h1>Welcome to {{title}}</h1>
+<h2>Welcome to the {{title}}.</h2>
 
-<app-list></app-list>
+<ul *ngFor="let zip of zipinfo">
+  <li>{{zip.name }}</li>
+</ul>
+
+
+<app-parent></app-parent>

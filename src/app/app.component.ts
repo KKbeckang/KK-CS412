@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { zip } from './zipcodes/zipcode';
+import { zips } from './zipcodes/zipcodeMOCK';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Zipcod2Location';
+  title = 'Zipcode to location APP';
+  location: any;
+
+  zipinfo: zip[] = zips;
+  selectedLocation: zip;
+
+  constructor() {}
+
 }

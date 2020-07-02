@@ -1,0 +1,7 @@
+<form (ngSubmit)="emitEvent()">
+  <input id="zip" name="zip" class="form-control"
+         required minlength="5"
+         [(ngModel)]="zipcode" #zip="ngModel" >
+  <button *ngIf="zip.errors" disabled>Submit</button>
+
+</form>
